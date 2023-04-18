@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <a href="#">Movie Recommender</a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <h1>Movie Recommendation System</h1>
+    <form>
+      <label for="movie_id">Enter a movie name:</label>
+      <input type="text" id="movie_title" name="movie_title" required>
+      <input type="submit" value="Recommend">
+    </form>
+
+  <h2>Popular Movies</h2>
+  <div id="recommended_movies">
+    {% for movie in movies %}
+      <div class="movie">
+        <img src="{{ movie.poster_path }}" alt="{{ movie.title }}">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.overview }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if recommended_movies %}
+    <h2>Recommended Movies</h2>
+    <div id="recommended_movies">
+      {% for movie in recommended_movies %}
+        <div class="movie">
+          <img src="{{ movie.poster_path }}" alt="{{ movie.title }}">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.overview }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  <footer>
+  <p>&copy; 2022 Movie Recommender</p>
+  </footer>
+</body>
+
+
+</html>
