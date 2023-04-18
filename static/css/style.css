@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e9e9;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #4b4b4b;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #4b4b4b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#recommended_movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#recommended_movies div {
+    width: 400px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+    padding: 20px;
+}
+
+#recommended_movies h2 {
+    margin-top: 0;
+    color: #e50914;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e50914;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #e50914;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.movie img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.movie p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+nav {
+  background-color: #1E1E1E;
+  height: 20px;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFC107;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+  }
+
+  nav .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
